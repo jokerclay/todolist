@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*
+* note 的样式
+*/
+.note {
+  background-color:#fef68a;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  /*min-height 属性设置元素的最低高度*/
+  min-height:170px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  /*元素置于*/
+  justify-content: space-between;
+}
+
