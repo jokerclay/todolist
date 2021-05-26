@@ -6,7 +6,7 @@
 import {MdDeleteForever} from "react-icons/md";
 
 //{id,text,date} 要放到 {} 中
-const Note = ({id,text,date})=>{
+const Note = ({id,text,date,handleDeleteNote})=>{
 
 
     // 返回 一个 div class 为 note, 这个 div 中 包含  span 文本内容  div时间  div 删除图标
@@ -19,7 +19,7 @@ const Note = ({id,text,date})=>{
                 {/*时间*/}
                  <small>{date}</small>
                 {/*删除图标，从 react-icons 中导入删除图标*/}
-                <MdDeleteForever className="delete-icon"  size = "1.3rem" />
+                <MdDeleteForever className="delete-icon"  size = "1.3rem" onClick={()=>handleDeleteNote(id)}/>
             </div>
         </div>
     )

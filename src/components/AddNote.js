@@ -4,9 +4,15 @@ const AddNote = ({handleAddNote})=>{
     // 获取用户的输入
     const [noteText,setNoteText]=useState('');
 
+    // 计算剩余字数
+    const characterLimit = 200;
+
     const handleChange = (event)=>{
         // console.log(event.target.value)
-        setNoteText(event.target.value);
+        if(characterLimit - event.target.value >=0)
+        {
+            setNoteText(event.target.value);
+        }
 
     }
     const handleSaveClick=()=>{
@@ -15,11 +21,7 @@ const AddNote = ({handleAddNote})=>{
             handleAddNote(noteText)
             setNoteText('')
         }
-        else
-        {
-
-        }
-    }
+    };
     return(
         <div className="note new">
             <textarea
@@ -32,7 +34,7 @@ const AddNote = ({handleAddNote})=>{
                 value = {noteText}
             ></textarea>
             <div className="note-footer">
-                <small>剩余200字</small>
+                <small>剩余{characterLimit - noteText.length}字</small>
                 <button className="save" onClick = {handleSaveClick}>保存</button>
             </div>
         </div>

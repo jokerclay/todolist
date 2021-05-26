@@ -6,7 +6,7 @@
 import Note from './Note'
 
 import AddNote from "./AddNote";
-const NoteList = ({notes,handleAddNote}) =>{
+const NoteList = ({notes,handleAddNote,handleDeleteNote}) =>{
 
     // 返回一个 class 为 note-list 的 div
     return(
@@ -18,6 +18,7 @@ const NoteList = ({notes,handleAddNote}) =>{
                         id={note.id}
                         text={note.text}
                         date={note.date}
+                        handleDeleteNote={handleDeleteNote}
                     />
                 )
 

@@ -53,6 +53,8 @@ code {
   flex-direction: column;
   /*元素置于 flex box 的开始和结束*/
   justify-content: space-between;
+/* 保留文本中的空格*/
+  white-space: pre-wrap;
 }
 
 /*
@@ -89,4 +91,21 @@ background-color:lightgray;
   background-color:whitesmoke;
   cursor:pointer;
 }
-
+.delete-icon{
+  cursor:pointer;
+}
+.search{
+  display:flex;
+  align-items:center;
+  background-color:rgb(233,233,233);
+  border-radius:10px;
+  padding:5px;
+  margin-bottom: 1.5em;
+}
+.search input{
+  border: none;
+  background-color:rgb(233,233,233) 
+}
+.search input:focus{
+  outline:none;
+  }
