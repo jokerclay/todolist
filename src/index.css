@@ -22,6 +22,7 @@ code {
   /* 当浏览器你窗口变窄时  使 note 不至于 被推到最边缘 */
   padding-left:15px;
   padding-right:15px;
+  min-height:100vh;
 }
 
 /*
@@ -109,3 +110,17 @@ background-color:lightgray;
 .search input:focus{
   outline:none;
   }
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.dark-mode{
+  background-color:rgb(53, 54, 58)
+}
+.dark-mode h1{
+  color:whitesmoke;
+}
