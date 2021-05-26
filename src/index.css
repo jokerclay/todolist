@@ -12,18 +12,58 @@ code {
     monospace;
 }
 /*
+* container 居中处理
+*/
+.container {
+  max-width:960px;
+  margin-right: auto;
+  margin-left: auto;
+
+  /* 当浏览器你窗口变窄时  使 note 不至于 被推到最边缘 */
+  padding-left:15px;
+  padding-right:15px;
+}
+
+/*
+* 将 note 做成响应式
+*/
+.notes-list{
+  display:grid;
+  grid-gap: 1rem;
+/*  定义 grid  有多少行*/
+/*  grid-template-columns: repeat(4,250px);*/
+/*  上面这行代码不能实现响应式的原因是，将行数写死了，可以用下面这行代替 */
+/*  每一行不能比 250px 小，不能大于 1 fractional unit (可获得的空间) */
+
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+
+}
+
+
+/*
 * note 的样式
 */
 .note {
   background-color:#fef68a;
-  margin-bottom: 10px;
   border-radius: 10px;
   /*min-height 属性设置元素的最低高度*/
   min-height:170px;
+  /* rem 与 字体相关连，如果改变字体的大小，padding 也会改变*/
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  /*元素置于*/
+  /*元素置于 flex box 的开始和结束*/
   justify-content: space-between;
 }
+
+/*
+* note 底部的样式
+*/
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
 
