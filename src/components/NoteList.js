@@ -5,7 +5,8 @@
 //导入从 Note.js 中导入 Note, 否则会报错 undefined
 import Note from './Note'
 
-const NoteList = ({notes}) =>{
+import AddNote from "./AddNote";
+const NoteList = ({notes,handleAddNote}) =>{
 
     // 返回一个 class 为 note-list 的 div
     return(
@@ -26,6 +27,7 @@ const NoteList = ({notes}) =>{
         {/*    <Note />*/}
         {/*    <Note />*/}
         {/*    <Note />*/}
+            <AddNote  handleAddNote={handleAddNote} />
         </div>
     )
 }
